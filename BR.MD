@@ -103,3 +103,8 @@
 3. 我该成家了,薪资期待高一点,不然找不到女朋友. 如果按市价,我只值10,希望你能给我13.我会回报你30.
 
 ## 项目经验
+
+### 算法相关
+ 1. diff 算法
+  [代码地址](https://github.com/BlankRain/diff/blob/master/src/main/clojure/diff.clj) https://github.com/BlankRain/diff/blob/master/src/main/clojure/diff.clj
+  
