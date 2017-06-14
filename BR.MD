@@ -105,6 +105,49 @@
 ## 项目经验
 
 ### 算法相关
- 1. diff 算法
-  [代码地址](https://github.com/BlankRain/diff/blob/master/src/main/clojure/diff.clj) https://github.com/BlankRain/diff/blob/master/src/main/clojure/diff.clj
-  
+#### 1. diff 算法
+   
+   [代码地址](https://github.com/BlankRain/diff/blob/master/src/main/clojure/diff.clj) https://github.com/BlankRain/diff/blob/master/src/main/clojure/diff.clj
+   
+   问题描述：在信息孤岛中,同一个事物,各个岛上有不同的表述形式.
+ 
+> 举个例子：乌龟这种生物.
+>
+> 在生物学上是这样描述的:乌龟（Chincmys reevesii ）隶属于龟科、乌龟属的一种.
+>
+>在动物分类学上隶属于爬行纲、龟鳖目、龟科，是常见的龟鳖目动物之一。是现存古老的爬行动物。
+>
+>而在村民言语中是这样描述的: 龟,鳖,王八
+   
+   
+   我的这个diff算法可实现不同信息孤岛的同一事物对比.
+ 
+ 
+算法特点:
+
+    1. It works. 能解决上述问题.
+      
+    2. It can better. 存在优化空间. 使用的是最直接的循环逐个比较.会出现A-B 和 B-A 这种情况.这两种情况,是等价的,结果是一致的,可优化掉,目前未优化.
+      
+#### 2. 数据编码算法
+   此算法为工作成果,无代码可展示.
+   
+   问题描述：N个9位数字字符串,无损最短表达出来.
+  
+> 举个例子
+>
+> 假设 N=2 数据为 111111111 222222222
+>
+> 这是 N个9位数字字符串,我可以用 `111111111,222222222` `(R 1 9)(R 2 9)` `1R9,*2` ...m种方式来表达这种情况.
+>
+> 要针对通用情况,给出一个最短的编码后的结果.
+>
+   
+   我的数据编码算法基本思路是替换法,针对特定细节再进行一点特殊调整.
+   
+算法特点:
+
+    1. It works. 能解决上述问题. 100%无损. 
+ 
+    2. 压缩率在固定区间内根据具体数据情况上下浮动. 是个O(n)算法.
+   
