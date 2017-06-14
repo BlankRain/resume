@@ -1,5 +1,5 @@
 var Nightmare = require('nightmare');		
-var nightmare = Nightmare({ show: true });
+var nightmare = Nightmare({ show: false });
 
 nightmare
   .goto('https://github.com/BlankRain/resume/blob/master/BR.MD')
@@ -7,7 +7,7 @@ nightmare
   .inject('js','./githubpdf.js')
   .pdf("./BR.pdf",{
         marginsType: 0,
-        printBackground: false,
+        printBackground: true,
         printSelectionOnly: false,
         landscape: false,
         pageSize :'A4'
