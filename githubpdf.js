@@ -3,8 +3,10 @@
 另存为pdf
 **/
 function showOnlyReadMe(){
-var x=['.site-footer-container','.file-header','.commit-tease','.file-navigation','.pagehead','.header'];
+var x=['.site-footer-container','.file-header','.commit-tease','.file-navigation','.pagehead','.site-header','.header'];
 for(var i in x){
-    document.querySelector(x[i]).hidden=true;
+    var element=document.querySelector(x[i]);
+    if(element) element.hidden=true;
 }
 }
+showOnlyReadMe();
