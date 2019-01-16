@@ -1,11 +1,13 @@
 var Nightmare = require('nightmare');		
-var nightmare = Nightmare({ show: false });
+var nightmare = Nightmare({ show: true });
+var fileName= process.argv[2]||'2018_07'
+console.log()
 
 nightmare
-  .goto('https://github.com/BlankRain/resume/blob/master/BR.MD')
+  .goto(`https://github.com/BlankRain/resume/blob/master/Brain_${fileName}.md`)
   .wait('#readme')
   .inject('js','./githubpdf.js')
-  .pdf("./BR.pdf",{
+  .pdf(`./Brain_${fileName}.pdf`,{
         marginsType: 0,
         printBackground: true,
         printSelectionOnly: false,
